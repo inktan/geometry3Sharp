@@ -50,7 +50,11 @@ namespace g3
         {
             get { return (double)Math.Sqrt(LengthSquared); }
         }
-
+        /// <summary>
+        /// 向量自身归一化 函数返回向量的实际长度
+        /// </summary>
+        /// <param name="epsilon"></param>
+        /// <returns></returns>
         public double Normalize(double epsilon = MathUtil.Epsilon)
         {
             double length = Length;
@@ -64,6 +68,9 @@ namespace g3
             }
             return length;
         }
+        /// <summary>
+        /// 基于当前向量归一化 并返回新实例
+        /// </summary>
         public Vector2d Normalized
         {
             get {

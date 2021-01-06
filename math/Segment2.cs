@@ -75,7 +75,9 @@ namespace g3
             Vector2d proj = Center + t * Direction;
             return proj.DistanceSquared(p);
         }
-
+        /// <summary>
+        /// 求垂足，如果垂足落在线段外，则为线段端点
+        /// </summary>
         public Vector2d NearestPoint(Vector2d p)
         {
 			double t = (p - Center).Dot(Direction);
@@ -85,7 +87,9 @@ namespace g3
                 return P0;
 			return Center + t * Direction;
         }
-
+        /// <summary>
+        /// 点与线段中点的连线在线段上的投影长度
+        /// </summary>
         public double Project(Vector2d p)
         {
             return (p - Center).Dot(Direction);

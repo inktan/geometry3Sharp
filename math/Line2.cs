@@ -31,12 +31,19 @@ namespace g3
         public Vector2d PointAt(double d) {
             return Origin + d * Direction;
         }
-
+        /// <summary>
+        /// 投影点距离直线原点的距离
+        /// </summary>
         public double Project(Vector2d p)
         {
             return (p - Origin).Dot(Direction);
         }
-
+  
+        /// <summary>
+        /// 基于投影点与直线原点的距离，找到垂足，再找到垂线的距离
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public double DistanceSquared(Vector2d p)
         {
             double t = (p - Origin).Dot(Direction);

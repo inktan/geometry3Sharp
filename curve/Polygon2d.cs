@@ -287,7 +287,7 @@ namespace g3
 
 
 		/// <summary>
-		/// Returns true if point inside polygon, using fast winding-number computation
+		/// Returns true if point inside polygon, using fast winding-number computation 在线上也属于包含的范畴
 		/// </summary>
 		public bool Contains(Vector2d P)
 		{
@@ -334,7 +334,7 @@ namespace g3
 		}
 
         /// <summary>
-        /// Checks that all points on a segment are within the area defined by the Polygon2d.
+        /// Checks that all points on a segment are within the area defined by the Polygon2d. // 不包含线上
         /// </summary>
         public bool Contains(Segment2d o)
         {
